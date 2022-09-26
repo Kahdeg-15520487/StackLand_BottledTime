@@ -70,13 +70,13 @@ namespace SandClock.Sources
                     child.CurrentTimerTime,
                     child.TargetTimerTime
                 );
-                var newtxt = $"root: {timerInfo} ";
-                if (!newtxt.Equals(txt))
-                {
-                    this.txt = newtxt;
-                    Plugin.L.LogInfo(this.txt);
-                    Plugin.L.LogInfo(child.CardData.Id);
-                }
+                // var newtxt = $"root: {timerInfo} ";
+                // if (!newtxt.Equals(txt))
+                // {
+                    // this.txt = newtxt;
+                    // Plugin.L.LogInfo(this.txt);
+                    // Plugin.L.LogInfo(child.CardData.Id);
+                // }
                 if (child.TimerRunning)
                 {
                     child.CurrentTimerTime += Time.deltaTime * WorldManager.instance.TimeScale;
@@ -127,6 +127,7 @@ namespace SandClock.Sources
                 case "jungle":
                 case "mountain":
                 case "old_village":
+				case "bottled_time":
                     return true;
                 default:
                     return false;

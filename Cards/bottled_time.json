@@ -4,6 +4,6 @@
   "descriptionOverride": "Time stored in a bottle.",
   "value": 5,
   "type": "resources",
-  "icon": "bottled_time.png",
+  "icon": "card_bottled_time.png",
   "script": "SandClock.Sources.Clock"
 }
