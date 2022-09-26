@@ -10,8 +10,9 @@ namespace SandClock.Sources
     {
         class TimerData
         {
-            public TimerData(string name, string status, TimerAction timerAction, string timerActionId, string timerBlueprintId, int timerSubprintIndex, bool timerRunning, float currentTimerTime, float targetTimerTime)
+            public TimerData(string id, string name, string status, TimerAction timerAction, string timerActionId, string timerBlueprintId, int timerSubprintIndex, bool timerRunning, float currentTimerTime, float targetTimerTime)
             {
+                Id = id;
                 Name = name;
                 Status = status;
                 TimerAction = timerAction;
@@ -23,6 +24,7 @@ namespace SandClock.Sources
                 TargetTimerTime = targetTimerTime;
             }
 
+            public string Id { get; }
             public string Name { get; }
             public string Status { get; }
             public TimerAction TimerAction { get; }
@@ -36,6 +38,7 @@ namespace SandClock.Sources
             {
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine();
+                sb.AppendLine($"Id: {Id}");
                 sb.AppendLine($"Name: {Name}");
                 sb.AppendLine($"Status: {Status}");
                 sb.AppendLine($"TimerActionId: {TimerActionId}");
@@ -52,10 +55,11 @@ namespace SandClock.Sources
 
         public override void UpdateCard()
         {
-            var child = GetFirstChildNotClock();
+            var child = GetFirstChild();
             if (child != null)
             {
                 this.timerInfo = new TimerData(
+                    child.CardData.Id,
                     child.CardData.Name,
                     child.Status,
                     child.TimerAction,
@@ -71,6 +75,7 @@ namespace SandClock.Sources
                 {
                     this.txt = newtxt;
                     Plugin.L.LogInfo(this.txt);
+                    Plugin.L.LogInfo(child.CardData.Id);
                 }
                 if (child.TimerRunning)
                 {
@@ -85,7 +90,7 @@ namespace SandClock.Sources
             base.UpdateCard();
         }
 
-        private GameCard GetFirstChildNotClock()
+        private GameCard GetFirstChild()
         {
             var result = this.MyGameCard.Child;
             while (result != null && result.CardData.Id == this.Id)
@@ -97,7 +102,35 @@ namespace SandClock.Sources
 
         protected override bool CanHaveCard(CardData otherCard)
         {
-            return true;
+            switch (otherCard.Id)
+            {
+                case "berrybush":
+                case "apple_tree":
+                case "banana_tree":
+                case "coconut_tree":
+                case "cotton_plant":
+                case "sugar_cane":
+                case "tree":
+                case "lumbercamp":
+                case "rock":
+                case "quarry":
+                case "sand_quarry":
+                case "iron_deposit":
+                case "iron_mine":
+                case "gold_deposit":
+                case "gold_mine":
+                case "cave":
+                case "catacombs":
+                case "forest":
+                case "plains":
+                case "graveyard":
+                case "jungle":
+                case "mountain":
+                case "old_village":
+                    return true;
+                default:
+                    return false;
+            }
         }
     }
 }
