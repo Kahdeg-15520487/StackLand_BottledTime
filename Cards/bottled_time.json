@@ -1,0 +1,9 @@
+{
+  "id": "bottled_time",
+  "nameOverride": "Bottled Time",
+  "descriptionOverride": "Time stored in a bottle.",
+  "value": 5,
+  "type": "resources",
+  "icon": "bottled_time.png",
+  "script": "SandClock.Sources.Clock"
+}

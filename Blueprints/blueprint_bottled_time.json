@@ -1,0 +1,17 @@
+{
+  "id": "blueprint_bottled_time",
+  "nameOverride": "Idea: Sands in a Bottle",
+  "nameTerm": "blueprint_bottled_time_name",
+  "group": "Resources",
+  "icon": "card_bottled_time.png",
+  "descriptionOverride": "1x Empty Bottle\n5x Sand\n\n\"Quickly turns Stone into Bricks\"",
+  "subprints": [
+    {
+      "requiredCards": "empty_bottle,sand,sand,sand,sand,sand",
+      "resultCard": "bottled_time",
+      "time": 60,
+      "statusOverride": "Storing time in a bottle",
+      "statusTerm": "blueprint_bottled_time_status"
+    }
+  ]
+}

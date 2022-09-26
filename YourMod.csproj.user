@@ -1,5 +1,6 @@
 <Project>
     <PropertyGroup>
-        <stacklandsDir>C:/Program Files (x86)/Steam/steamapps/common/Stacklands</stacklandsDir>
+        <stacklandsDir>E:\SteamLibrary\steamapps\common\Stacklands</stacklandsDir>
+		<tsmmDir>C:\Users\Minh Le\AppData\Roaming\Thunderstore Mod Manager\DataFolder\Stacklands\profiles\Default/BepInEx/plugins/BerryLoader/BerryLoader.dll</tsmmDir>
     </PropertyGroup>
 </Project>

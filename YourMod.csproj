@@ -2,11 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>YourMod</AssemblyName>
+    <AssemblyName>bottled_time</AssemblyName>
     <Description>Your amazing mod!</Description>
     <Version>1.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
+    <UserSecretsId>df2c1d7c-d0c1-4e8e-8165-01035b47a915</UserSecretsId>
+    <RootNamespace>SandClock</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,8 +19,7 @@
 
   <ItemGroup>
     <Reference Include="BerryLoader">
-      <HintPath>$(stacklandsDir)/BepInEx/plugins/BerryLoader/BerryLoader.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>C:\Users\Minh Le\AppData\Roaming\Thunderstore Mod Manager\DataFolder\Stacklands\profiles\Default\BepInEx\plugins\BerryLoader-BerryLoader\BerryLoader.dll</HintPath>
     </Reference>
     <Reference Include="GameScripts">
       <HintPath>$(stacklandsDir)/Stacklands_Data/Managed/GameScripts.dll</HintPath>
