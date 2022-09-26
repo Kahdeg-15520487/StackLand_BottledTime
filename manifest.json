@@ -2,7 +2,7 @@
   "name": "BottledTime",
   "id": "bottled_time",
   "description": "Add sands in a bottle to speed up process timer.",
-  "version_number": "0.0.2",
+  "version_number": "0.0.3",
   "dependencies": [ "BepInEx-BepInExPack_Stacklands-5.4.2100", "BerryLoader-BerryLoader-0.5.2" ],
   "website_url": "https://github.com/Kahdeg-15520487/StackLand_BottledTime"
 }
