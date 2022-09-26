@@ -1,6 +1,6 @@
 New-Item -Path "TSMMPackage/plugins" -ItemType Directory -Force
 Copy-Item "icon.png" -Destination "./TSMMPackage" -Force
-Copy-Item "README.MD" -Destination "./TSMMPackage" -Force
+Copy-Item "README.md" -Destination "./TSMMPackage" -Force
 Copy-Item "manifest.json" -Destination "./TSMMPackage" -Force
 Copy-Item "./Blueprints" -Destination "./TSMMPackage/plugins" -Recurse -Force
 Copy-Item "./Cards" -Destination "./TSMMPackage/plugins" -Recurse -Force
